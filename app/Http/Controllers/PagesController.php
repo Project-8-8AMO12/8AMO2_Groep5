@@ -29,4 +29,8 @@ class PagesController extends Controller
     public function getLidWorden() {
         return view('lidWorden');
     }
+
+    public function getDashboard() {
+        return view('backend/dashboard');
+    }
 }

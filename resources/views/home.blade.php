@@ -1,9 +1,2 @@
-@extends('layouts.app')
+@extends('layouts.standard.app')
 
-@section('title')
-    Home
-@endsection()
-
-@section('content')
-
-@endsection

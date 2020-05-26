@@ -20,4 +20,12 @@ Route::get('/activiteiten', 'PagesController@getActiviteiten');
 Route::get('/cursussen', 'PagesController@getCursussen');
 Route::get('/vereniging', 'PagesController@getVereniging');
 Route::get('/zwermGezien', 'PagesController@getZwermGezien');
-Route::get('/lidWorden', 'PagesController@getLidWorden');
+Route::get('/lid-worden', 'PagesController@getLidWorden');
+
+
+# Backend Pages
+Route::prefix('backend')->group(function () {
+    Auth::routes();
+    Route::get('/', 'DashboardController@index');
+    Route::get('/dashboard', 'DashboardController@index');
+});

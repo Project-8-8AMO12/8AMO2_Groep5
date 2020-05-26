@@ -9,7 +9,7 @@
                 <a class="nav-item nav-link" href="/cursussen">Cursussen</a>
                 <a class="nav-item nav-link" href="/vereniging">De Vereniging</a>
                 <a class="nav-item nav-link" href="/zwermGezien">Zwerm Gezien?</a>
-                <a class="nav-item nav-link" href="/lidWorden">Lid Worden!</a>
+                <a class="nav-item nav-link" href="/lid-worden">Lid Worden!</a>
             </div>
         </div>
     </div>
