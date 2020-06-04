@@ -11,11 +11,8 @@
 |
 */
 
-# Default
+# GET
 Route::get('/', 'PagesController@getHome');
-
-# Standard Pages
-Route::get('/home', 'PagesController@getHome');
 Route::get('/activiteiten', 'PagesController@getActiviteiten');
 Route::get('/cursussen', 'PagesController@getCursussen');
 Route::get('/vereniging', 'PagesController@getVereniging');

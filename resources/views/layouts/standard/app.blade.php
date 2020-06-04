@@ -24,7 +24,7 @@
         @yield('content')
     </main>
 
-    @if(Request::is('/') || Request::is('home'))
+    @if(Request::is('/'))
         @include('inc.standard.jumbotron')
     @endif
 
