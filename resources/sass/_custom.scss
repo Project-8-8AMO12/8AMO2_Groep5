@@ -1,5 +1,20 @@
 #jumbo {
-    background-image: url("/images/banner.jpg");
-    background-size: cover;
+    //background-image: url("/images/banner.jpg");
     height: 75vh;
+    background: linear-gradient(
+            to bottom,
+            rgba(248,250,252, 0),
+            rgba(248,250,252, 0.10),
+            rgba(248,250,252, 0.25),
+            rgba(248,250,252, 1)
+    ),url("/images/banner.jpg");
+    background-size: cover;
+}
+
+#homeJumbo {
+    background-color: $imkersGreen;
+}
+
+#footer {
+    background-color: black;
 }
