@@ -18,16 +18,16 @@
 </head>
 <body>
 
+    {{--navbar--}}
     @include('inc.standard.navbar')
 
-    <main class="container">
-        @yield('content')
-    </main>
+    {{--jumbotron--}}
+    @include('inc.standard.jumbotron')
 
-    @if(Request::is('/'))
-        @include('inc.standard.jumbotron')
-    @endif
+    {{--content of the page--}}
+    @yield('content')
 
+    {{--footer--}}
     @include('inc.standard.footer')
 
 </body>
