@@ -18,11 +18,11 @@
 </head>
 <body>
 
-    @include('inc.backend.navbar')
+@if (!Request::is('backend/login') && !Request::is('backend/register'))
+    @include('partials.backend.navbar')
+@endif
 
-    <main class="container">
-        @yield('content')
-    </main>
+@yield('content')
 
 </body>
 </html>

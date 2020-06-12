@@ -10939,11 +10939,19 @@ a.text-dark:focus {
   background-size: cover;
 }
 
-#homeJumbo {
+.imkersGreen {
   background-color: #a9ba4f;
 }
 
-#footer {
+.imkersYellow {
+  background-color: #ffd73e;
+}
+
+.black {
   background-color: black;
+}
+
+.h-35 {
+  height: 35%;
 }
 
