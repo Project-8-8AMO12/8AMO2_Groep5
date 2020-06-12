@@ -26,7 +26,7 @@ Route::get('/contact', "ContactController@getUserAdmin");
 # Backend Pages
 Route::prefix('backend')->group(function () {
     Auth::routes();
-    Route::get('/', 'DashboardController@index');
-    Route::get('/dashboard', 'DashboardController@index');
+    Route::get('/', 'BackendController@index');
+    Route::get('/dashboard', 'BackendController@index');
 });
 

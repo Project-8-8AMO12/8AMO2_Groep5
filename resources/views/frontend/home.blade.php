@@ -5,7 +5,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 190 1440 119">
     <path fill="#a9ba4f" fill-opacity="1" d="M0,256L288,224L576,256L864,288L1152,224L1440,192L1440,320L1152,320L864,320L576,320L288,320L0,320Z"></path>
 </svg>
-    <div class="jumbotron jumbotron-fluid text-white d-flex p-0 m-0" id="homeJumbo">
+    <div class="jumbotron jumbotron-fluid text-white d-flex p-0 m-0 imkersGreen">
         <div class="container my-5">
             <h1 class="text-center font-weight-bold display-4 mb-5">Cursussen</h1>
             <div class="row text-center">
@@ -46,7 +46,7 @@
                     <p>
                         Lorem ipsum dolor sit amet, elit,
                         sed do ut labore et dolore aliqua.
-                        Ut enim ad minim, quis nostrud ullamco
+                        Ut enim ad minim, quis nostrud ullamco.
                         laboris nisi ut aliquip. sed do eiusmod tempor
                     </p>
                 </div>
