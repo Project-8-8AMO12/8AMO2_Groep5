@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ContactController extends Controller {
     public function saveData() {
@@ -13,13 +14,30 @@ class ContactController extends Controller {
             'message' => 'required'
         ]);
         $contact = new Contact();
-        $contact->name = request("name");
-        $contact->user_id = 1;
-        $contact->email = request("email");
-        $contact->message = request("message");
+        $contact->name = $this->filterData(request("name"));
+        $contact->user_id = $this->filterData(request("user_id"));
+        $contact->email = $this->filterData(request("email"));
+        $contact->message = $this->filterData(request("message"));
         $contact->save();
 
         return view('home');
     }
 
+    public function getUserAdmin() {
+        $users = DB::table('users')->select('id', 'name', 'admin_lvl')->get();
+
+        foreach ($users as $user) {
+            if($user->admin_lvl >= 3) {
+                return view("/contact", [
+                    "admins" => $users
+                ]);
+            }
+        }
+        return view("contact");
+    }
+
+    private function filterData($string) {
+        $string = filter_var($string, FILTER_SANITIZE_SPECIAL_CHARS);
+        return $string;
+    }
 }

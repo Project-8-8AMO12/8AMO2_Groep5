@@ -21,7 +21,7 @@ Route::get('/vereniging', 'PagesController@getVereniging');
 Route::get('/zwermGezien', 'PagesController@getZwermGezien');
 Route::get('/lid-worden', 'PagesController@getLidWorden');
 Route::get('/contact', "PagesController@getContact");
-
+Route::get('/contact', "ContactController@getUserAdmin");
 
 # Backend Pages
 Route::prefix('backend')->group(function () {
@@ -29,3 +29,4 @@ Route::prefix('backend')->group(function () {
     Route::get('/', 'DashboardController@index');
     Route::get('/dashboard', 'DashboardController@index');
 });
+
