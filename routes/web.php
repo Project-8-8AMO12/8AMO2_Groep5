@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+# POST
+Route::post("contact", "ContactController@saveData");
 
 # GET
 Route::get('/', 'PagesController@getHome');
@@ -18,6 +20,7 @@ Route::get('/cursussen', 'PagesController@getCursussen');
 Route::get('/vereniging', 'PagesController@getVereniging');
 Route::get('/zwermGezien', 'PagesController@getZwermGezien');
 Route::get('/lid-worden', 'PagesController@getLidWorden');
+Route::get('/contact', "PagesController@getContact");
 
 
 # Backend Pages

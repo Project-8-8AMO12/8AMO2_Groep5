@@ -33,4 +33,8 @@ class PagesController extends Controller
     public function getDashboard() {
         return view('backend.dashboard');
     }
+
+    public function getContact() {
+        return view('contact');
+    }
 }
