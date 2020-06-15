@@ -1,50 +1,43 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm mb-5">
-    <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            imkersLeiden
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+{{--<nav class="bg-dark">--}}
+{{--    <div class="px-5 d-flex">--}}
+{{--        <a class='ml-5 text-white p-3 {{ Request::is('backend/dashboard') ? '_active' : '' }}' href="/backend/dashboard">Dashboard</a>--}}
+{{--        <a class='text-white p-3 {{ Request::is('backend/CMS') ? '_active' : '' }}' href="/backend/CMS">CMS</a>--}}
+{{--        <a class='text-white p-3 {{ Request::is('backend/settings') ? '_active' : '' }}' href="/backend/settings">Settings</a>--}}
+{{--        <!-- Authentication Links -->--}}
+{{--        @guest--}}
+{{--            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>--}}
+{{--            @if (Route::has('register'))--}}
+{{--                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
+{{--            @endif--}}
+{{--        @else--}}
+{{--            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
+{{--                {{ Auth::user()->name }} <span class="caret"></span>--}}
+{{--            </a>--}}
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
+{{--            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">--}}
+{{--                <a class="dropdown-item" href="{{ route('logout') }}"--}}
+{{--                   onclick="event.preventDefault();--}}
+{{--                                             document.getElementById('logout-form').submit();">--}}
+{{--                    {{ __('Logout') }}--}}
+{{--                </a>--}}
 
-            </ul>
+{{--                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+{{--                    @csrf--}}
+{{--                </form>--}}
+{{--            </div>--}}
+{{--        @endguest--}}
+{{--    </div>--}}
+{{--</nav>--}}
 
-            <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
-                <!-- Authentication Links -->
-                @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                    </li>
-                    @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                    @endif
-                @else
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-                @endguest
-            </ul>
+<nav class="bg-dark">
+    <div class="container-fluid row m-0 p-0">
+        <div class="col-2 p-0 d-flex">
+            <a class='h4 m-auto text-white p-3' href="#">imkersLeiden</a>
+        </div>
+        <div class="col p-0 d-flex">
+            <a class='text-white p-4 {{ Request::is('backend/dashboard') ? '_active' : '' }}' href="/backend/dashboard">Dashboard</a>
+            <a class='text-white p-4 {{ Request::is('backend/dashboard/CMS') ? '_active' : '' }}' href="/backend/dashboard/CMS">CMS</a>
+            <a class='text-white p-4 {{ Request::is('backend/dashboard/settings') ? '_active' : '' }}' href="/backend/dashboard/settings">Settings</a>
         </div>
     </div>
 </nav>

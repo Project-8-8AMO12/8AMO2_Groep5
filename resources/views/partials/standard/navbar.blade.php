@@ -5,7 +5,7 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav w-100">
-                <a class="nav-item nav-link m-auto" href="/activiteiten">Activiteiten <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link m-auto" href="/activiteiten">Activiteiten</a>
                 <a class="nav-item nav-link m-auto" href="/cursussen">Cursussen</a>
                 <a class="nav-item nav-link m-auto" href="/vereniging">De Vereniging</a>
                 <a class="nav-item nav-link m-auto" href="/zwermGezien">Zwerm Gezien?</a>

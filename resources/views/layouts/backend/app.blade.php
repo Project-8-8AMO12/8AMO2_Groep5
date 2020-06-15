@@ -22,7 +22,11 @@
     @include('partials.backend.navbar')
 @endif
 
-@yield('content')
+@if (!Request::is('backend/dashboard'))
+    @include('partials.backend.sidebar')
+@else
+    @yield('content')
+@endif
 
 </body>
 </html>

@@ -10947,11 +10947,23 @@ a.text-dark:focus {
   background-color: #ffd73e;
 }
 
+.imkersBlue {
+  background-color: #445c75;
+}
+
 .black {
   background-color: black;
 }
 
 .h-35 {
   height: 35%;
+}
+
+._active {
+  background-color: #ffd73e;
+}
+
+._sidebar-height {
+  height: calc(100vh - 71px);
 }
 
