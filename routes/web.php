@@ -35,7 +35,10 @@ Route::prefix('backend')->group(function () {
     Route::get('/CMS/partials', 'BackendController@getCMSPartials');
     Route::get('/CMS/content', 'BackendController@getCMSContent');
     Route::get('/CMS/assets', 'BackendController@getCMSAssets');
+    Route::get('/users', 'BackendController@getUsers');
 
     Route::get('/settings', 'BackendController@getSettings');
+
+    Route::post('users', 'UsersController@makeUser');
 });
 
