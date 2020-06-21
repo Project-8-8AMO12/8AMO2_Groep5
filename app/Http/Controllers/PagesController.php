@@ -30,11 +30,15 @@ class PagesController extends Controller
         return view('frontend.lidWorden');
     }
 
+    public function getBijenstal() {
+        return view('frontend.bijenstal');
+    }
+
     public function getDashboard() {
         return view('backend.dashboard');
     }
 
     public function getContact() {
-        return view('contact');
+        return view('frontend.contact');
     }
 }

@@ -28,12 +28,12 @@ class ContactController extends Controller {
 
         foreach ($users as $user) {
             if($user->admin_lvl >= 3) {
-                return view("/contact", [
+                return view("frontend/contact", [
                     "admins" => $users
                 ]);
             }
         }
-        return view("contact");
+        return view("frontend/contact");
     }
 
     private function filterData($string) {
