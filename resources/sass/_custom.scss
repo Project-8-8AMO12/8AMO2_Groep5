@@ -11,10 +11,30 @@
     background-size: cover;
 }
 
-#homeJumbo {
+.imkersGreen {
     background-color: $imkersGreen;
 }
 
-#footer {
+.imkersYellow {
+    background-color: $imkersYellow;
+}
+
+.imkersBlue {
+    background-color: $imkersBlue;
+}
+
+.black {
     background-color: black;
+}
+
+.h-35 {
+    height: 35%;
+}
+
+._active {
+    background-color: $imkersYellow;
+}
+
+._sidebar-height {
+    height: calc(100vh - 71px);
 }

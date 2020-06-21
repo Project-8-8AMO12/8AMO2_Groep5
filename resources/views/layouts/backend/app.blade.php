@@ -18,11 +18,15 @@
 </head>
 <body>
 
-    @include('inc.backend.navbar')
+@if (!Request::is('backend/login') && !Request::is('backend/register'))
+    @include('partials.backend.navbar')
+@endif
 
-    <main class="container">
-        @yield('content')
-    </main>
+@if (str_contains(url()->current(), '/CMS'))
+    @include('partials.backend.sidebar')
+@else
+    @yield('content')
+@endif
 
 </body>
 </html>
