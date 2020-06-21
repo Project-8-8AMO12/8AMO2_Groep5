@@ -12,7 +12,7 @@
         <div class="row font-weight-bold text-center py-4">
             <div class="col"><a class='text-white' href="/cursussen">Cursussen</a></div>
             <div class="col"><a class='text-white' href="/blad">Het Blad</a></div>
-            <div class="col"><a class='text-white' href="/nieuws">Nieuws</a></div>
+            <div class="col"><a class='text-white' href="/bijenstal">De Bijenstal</a></div>
             <div class="col"><a class='text-white' href="/aanmelden">Doe Nu Mee!</a></div>
         </div>
     </div>

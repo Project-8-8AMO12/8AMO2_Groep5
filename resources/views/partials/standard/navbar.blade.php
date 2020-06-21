@@ -9,7 +9,6 @@
                 <a class="nav-item nav-link m-auto" href="/cursussen">Cursussen</a>
                 <a class="nav-item nav-link m-auto" href="/vereniging">De Vereniging</a>
                 <a class="nav-item nav-link m-auto" href="/zwermGezien">Zwerm Gezien?</a>
-                <a class="nav-item nav-link m-auto" href="/bijenstal">De Bijenstal</a>
                 <a class="nav-item nav-link m-auto" href="/lid-worden">Lid Worden!</a>
             </div>
         </div>

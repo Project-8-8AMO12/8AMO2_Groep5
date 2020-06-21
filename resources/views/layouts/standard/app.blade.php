@@ -10,6 +10,9 @@
     <!--  Title  -->
     <title>@yield('title')</title>
 
+    <!--    icon -->
+    <link rel="icon" href="{{url('/images/icon.png')}}">
+
     <!-- Scripts -->
     <script src="{{ asset('/js/app.js') }}" defer></script>
 

@@ -1,5 +1,9 @@
 @extends('layouts.standard.app')
 
+@section('title', 'Activiteit')
+@section('jumboTitle', 'Leer de wondere wereld')
+@section('jumboSubTitle', 'van de Bij')
+
 @section('content')
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 190 1440 119">
