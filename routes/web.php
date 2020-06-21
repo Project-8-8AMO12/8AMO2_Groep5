@@ -29,12 +29,12 @@ Route::prefix('backend')->group(function () {
     Route::get('/', 'BackendController@index');
     Route::get('/dashboard', 'BackendController@index');
 
-    Route::get('/dashboard/CMS', 'BackendController@getCMS');
-    Route::get('/dashboard/CMS/pages', 'BackendController@getCMSPages');
-    Route::get('/dashboard/CMS/partials', 'BackendController@getCMSPartials');
-    Route::get('/dashboard/CMS/content', 'BackendController@getCMSContent');
-    Route::get('/dashboard/CMS/assets', 'BackendController@getCMSAssets');
+    Route::get('/CMS', 'BackendController@getCMS');
+    Route::get('/CMS/pages', 'BackendController@getCMSPages');
+    Route::get('/CMS/partials', 'BackendController@getCMSPartials');
+    Route::get('/CMS/content', 'BackendController@getCMSContent');
+    Route::get('/CMS/assets', 'BackendController@getCMSAssets');
 
-    Route::get('/dashboard/settings', 'BackendController@getSettings');
+    Route::get('/settings', 'BackendController@getSettings');
 });
 

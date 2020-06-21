@@ -35,9 +35,13 @@
             <a class='h4 m-auto text-white p-3' href="#">imkersLeiden</a>
         </div>
         <div class="col p-0 d-flex">
-            <a class='text-white p-4 {{ Request::is('backend/dashboard') ? '_active' : '' }}' href="/backend/dashboard">Dashboard</a>
-            <a class='text-white p-4 {{ Request::is('backend/dashboard/CMS') ? '_active' : '' }}' href="/backend/dashboard/CMS">CMS</a>
-            <a class='text-white p-4 {{ Request::is('backend/dashboard/settings') ? '_active' : '' }}' href="/backend/dashboard/settings">Settings</a>
+            <a class='text-white p-4 {{ str_contains(url()->current(), '/dashboard') ? '_active' : '' }}' href="/backend/dashboard">Dashboard</a>
+            <a class='text-white p-4 {{ str_contains(url()->current(), '/CMS') ? '_active' : '' }}' href="/backend/CMS">CMS</a>
+            <a class='text-white p-4 {{ str_contains(url()->current(), '/settings') ? '_active' : '' }}' href="/backend/settings">Settings</a>
         </div>
     </div>
 </nav>
+
+@if(str_contains(url()->current(), '/dashboard/attendance/report'))
+    <a href="#" class="btn btn-danger" target="_blank">Button</a>
+@endif

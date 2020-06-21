@@ -22,7 +22,7 @@
     @include('partials.backend.navbar')
 @endif
 
-@if (!Request::is('backend/dashboard'))
+@if (str_contains(url()->current(), '/CMS'))
     @include('partials.backend.sidebar')
 @else
     @yield('content')
