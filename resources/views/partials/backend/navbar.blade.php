@@ -38,6 +38,15 @@
             <a class='text-white p-4 {{ Request::is('backend/dashboard') ? '_active' : '' }}' href="/backend/dashboard">Dashboard</a>
             <a class='text-white p-4 {{ Request::is('backend/dashboard/CMS') ? '_active' : '' }}' href="/backend/dashboard/CMS">CMS</a>
             <a class='text-white p-4 {{ Request::is('backend/dashboard/settings') ? '_active' : '' }}' href="/backend/dashboard/settings">Settings</a>
+            <a class="dropdown-item" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
         </div>
     </div>
 </nav>

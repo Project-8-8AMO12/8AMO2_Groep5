@@ -22,7 +22,7 @@
     @include('partials.backend.navbar')
 @endif
 
-@if (!Request::is('backend/dashboard'))
+@if (!Request::is('backend/dashboard') && !Request::is('backend/login') && !Request::is('backend/register'))
     @include('partials.backend.sidebar')
 @else
     @yield('content')
