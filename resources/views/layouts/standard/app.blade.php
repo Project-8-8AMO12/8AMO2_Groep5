@@ -19,16 +19,16 @@
 <body>
 
     {{--navbar--}}
-    @include('inc.standard.navbar')
+    @include('partials.standard.navbar')
 
     {{--jumbotron--}}
-    @include('inc.standard.jumbotron')
+    @include('partials.standard.jumbotron')
 
     {{--content of the page--}}
     @yield('content')
 
     {{--footer--}}
-    @include('inc.standard.footer')
+    @include('partials.standard.footer')
 
 </body>
 </html>
