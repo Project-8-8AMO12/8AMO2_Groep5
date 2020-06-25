@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/zwermgezien.css') }}" rel="stylesheet">
+
 </head>
 <body>
 
