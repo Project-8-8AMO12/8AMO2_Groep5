@@ -30,6 +30,7 @@
             <div class="foto_short">foto 2</div>
         </div>
 
+
         <div class="bottom_info">
             <div class="title"><h1>Wanneer contact opnemen?</h1></div>
 
