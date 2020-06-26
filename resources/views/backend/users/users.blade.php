@@ -35,6 +35,19 @@
                     @csrf
                 </form>
             </div>
+            <div>
+                <label>List of users</label>
+                @foreach($users as $user)
+                    <div>
+                        <h1>Name: {{$user->name}}</h1>
+                        <p>E-mail: {{$user->email}}</p>
+                        <p>Admin Level: {{$user->admin_lvl}}</p>
+                        <form method="post" class="col-">
+                            <input type="submit" class="btn-danger btn" value="Delete User">
+                        </form>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </div>
 @endsection

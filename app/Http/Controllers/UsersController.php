@@ -19,6 +19,11 @@ class UsersController {
         $contact->admin_lvl = filter_var(request("admin"), FILTER_SANITIZE_SPECIAL_CHARS);
         $contact->password = password_hash(request("password"), PASSWORD_BCRYPT);
         $contact->save();
-        return view('backend.users.users');
+        return back();
+    }
+
+    public function getUsers() {
+        $users = User::all();
+        return $users;
     }
 }

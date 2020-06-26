@@ -47,7 +47,11 @@ class BackendController extends Controller
     }
 
     public function getUsers() {
-        return view('backend/users/users');
+        $users = new UsersController();
+
+        return view('backend/users/users', [
+            "users" => $users->getUsers()
+        ]);
     }
 
     public function getSettings() {
