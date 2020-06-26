@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
@@ -39,6 +40,15 @@ class PagesController extends Controller
     }
 
     public function getContact() {
-        return view('frontend.contact');
+        $users = DB::table('users')->select('id', 'name', 'admin_lvl')->get();
+
+        foreach ($users as $user) {
+            if($user->admin_lvl >= 3) {
+                return view("frontend/contact", [
+                    "admins" => $users
+                ]);
+            }
+        }
+        return view("frontend/contact");
     }
 }

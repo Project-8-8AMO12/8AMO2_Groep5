@@ -20,7 +20,7 @@ class ContactController extends Controller {
         $contact->message = $this->filterData(request("message"));
         $contact->save();
 
-        return view('home');
+        return view('frontend.home');
     }
 
     public function getUserAdmin() {
