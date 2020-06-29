@@ -26,6 +26,10 @@ class PagesController extends Controller
         return view('frontend.zwermGezien');
     }
 
+    public function getHetBlad() {
+        return view('frontend.hetblad');
+    }
+
     public function getLidWorden() {
         return view('frontend.lidWorden');
     }

@@ -19,6 +19,7 @@ Route::get('/activiteiten', 'PagesController@getActiviteiten');
 Route::get('/cursussen', 'PagesController@getCursussen');
 Route::get('/vereniging', 'PagesController@getVereniging');
 Route::get('/zwermGezien', 'PagesController@getZwermGezien');
+Route::get('/hetblad', 'PagesController@getHetBlad');
 Route::get('/lid-worden', 'PagesController@getLidWorden');
 Route::get('/bijenstal', "PagesController@getBijenstal");
 Route::get('/contact', "PagesController@getContact");
