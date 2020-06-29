@@ -1,6 +1,6 @@
 @extends('layouts.standard.app')
 
-@section('title', 'Activiteit')
+@section('title', 'Activiteiten')
 @section('jumboTitle', 'Leer de wondere wereld')
 @section('jumboSubTitle', 'van de Bij')
 

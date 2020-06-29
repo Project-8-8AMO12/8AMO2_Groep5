@@ -20,6 +20,7 @@
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/zwermgezien.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/vereniging.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/lidworden.css') }}" rel="stylesheet">
 
 </head>
 <body>
