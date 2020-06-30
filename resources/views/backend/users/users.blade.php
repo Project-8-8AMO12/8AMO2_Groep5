@@ -31,7 +31,7 @@
                     </div>
                     <div class="font-weight-bold">{{$errors->first('password')}}</div>
 
-                    <button class="btn btn-outline-dark" type="submit">Make User</button>
+                    <button class="btn btn-outline-dark" type="submit" name="makeUser">Make User</button>
                     @csrf
                 </form>
             </div>
@@ -42,8 +42,10 @@
                         <h1>Name: {{$user->name}}</h1>
                         <p>E-mail: {{$user->email}}</p>
                         <p>Admin Level: {{$user->admin_lvl}}</p>
-                        <form method="post" class="col-">
+                        <form method="post" name="Dusers">
+                            <input type="hidden" name="user_id" value="{{$user->id}}">
                             <input type="submit" class="btn-danger btn" value="Delete User">
+                            @csrf
                         </form>
                     </div>
                 @endforeach

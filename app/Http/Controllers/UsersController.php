@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Support\Facades\DB;
 
+
 class UsersController {
 
     public function makeUser() {
@@ -19,11 +20,19 @@ class UsersController {
         $contact->admin_lvl = filter_var(request("admin"), FILTER_SANITIZE_SPECIAL_CHARS);
         $contact->password = password_hash(request("password"), PASSWORD_BCRYPT);
         $contact->save();
+
         return back();
     }
 
     public function getUsers() {
         $users = User::all();
         return $users;
+    }
+
+    public function deleteUser() {
+        if(!empty(request("user_id"))) {
+            DB::table('users')->where('id', '=', $_POST['user_id'])->delete();
+        }
+        return back();
     }
 }
