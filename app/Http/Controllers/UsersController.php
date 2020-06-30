@@ -30,9 +30,14 @@ class UsersController {
     }
 
     public function deleteUser() {
-        if(!empty(request("user_id"))) {
+//        if(!empty(request("deleteUser"))) {
+//            DB::table('users')->where('id', '=', $_POST['user_id'])->delete();
+//        }
+
+        $str = "<form method='post'><input type ='text' name='name'></form>";
+        return view('backend/users/users', [ "oef" =>$str]);
+        if(!empty(request("editUser"))) {
             DB::table('users')->where('id', '=', $_POST['user_id'])->delete();
         }
-        return back();
     }
 }

@@ -39,12 +39,22 @@
                 <label>List of users</label>
                 @foreach($users as $user)
                     <div>
-                        <h1>Name: {{$user->name}}</h1>
-                        <p>E-mail: {{$user->email}}</p>
-                        <p>Admin Level: {{$user->admin_lvl}}</p>
-                        <form method="post" name="Dusers">
+                        <form class="mb-3" method="post" name="Dusers">
+                            <input value="Name: {{$user->name}}">
+                            <input value="E-mail: {{$user->email}}">
+{{--                            <input value="Admin Level: {{$user->admin_lvl}}">--}}
+                            <select name="admin">
+                                @if($user->admin_lvl = 1)
+                                    <option value="3">Admin</option>
+                                @elseif($user->admin_lvl = 2)
+                                    <option value="2">Webmaster</option>
+                                @else
+                                    <option value="1">Text editor</option>
+                                @endif
+                            </select>
                             <input type="hidden" name="user_id" value="{{$user->id}}">
-                            <input type="submit" class="btn-danger btn" value="Delete User">
+                            <input type="submit" class="btn-primary btn" value="Edit" name="editUser">
+                            <input type="submit" class="btn-danger btn" value="Delete" name="deleteUser">
                             @csrf
                         </form>
                     </div>
