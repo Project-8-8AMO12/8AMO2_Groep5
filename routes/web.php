@@ -23,7 +23,7 @@ Route::get('/hetblad', 'PagesController@getHetBlad');
 Route::get('/lid-worden', 'PagesController@getLidWorden');
 Route::get('/bijenstal', "PagesController@getBijenstal");
 Route::get('/contact', "PagesController@getContact");
-Route::get('/contact', "ContactController@getUserAdmin");
+
 
 # Backend Pages
 Route::prefix('backend')->group(function () {
