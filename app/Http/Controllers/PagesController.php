@@ -43,6 +43,10 @@ class PagesController extends Controller
         return view('backend.dashboard');
     }
 
+    public function getWinkel() {
+        return view('frontend.winkel');
+    }
+
     public function getContact() {
         $users = new ContactController();
         return view("frontend/contact", [
