@@ -38,8 +38,11 @@ Route::prefix('backend')->group(function () {
     Route::get('/users', 'BackendController@getUsers');
 
     Route::get('/settings', 'BackendController@getSettings');
+    Route::get('/settings/edit', 'SettingsController@editUser');
 
     Route::post('makeUser', 'SettingsController@makeUser');
     Route::post('settings', 'SettingsController@deleteUser');
+    Route::post('settings/saveEdit', 'SettingsController@saveEdit');
+
 });
 

@@ -43,14 +43,14 @@
                             <p>Name: {{$user->name}}</p>
                             <p>E-mail: {{$user->email}}</p>
                             <p>Admin Level: {{$user->admin_lvl}}</p>
+
+                            <a href="{{url("backend/settings/edit?user_id=". $user->id)}}" class="btn-primary btn" value="Edit">Edit</a>
                             <form class="mb-3" method="post" action="settings">
                                 <input type="hidden" name="user_id" value="{{$user->id}}">
-                                <input type="submit" class="btn-primary btn" value="Edit" name="editUser">
                                 <input type="submit" class="btn-danger btn" value="Delete" name="deleteUser">
                                 @csrf
                             </form>
                         </div>
-
                 @endforeach
                 </div>
             </div>
