@@ -14,7 +14,7 @@
     <button id="authorize_button" style="display: none;">Authorize</button>
     <button id="signout_button" style="display: none;">Sign Out</button>
 
-    <pre id="content" style="white-space: pre-wrap;"></pre>
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23a9ba4f&amp;ctz=Europe%2FAmsterdam&amp;src=aWxpYXNib3VqaUBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=bmwuZHV0Y2gjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%237986CB&amp;color=%2333B679&amp;color=%230B8043&amp;title=IMKERSVERENIGING%20LEIDEN&amp;showNav=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;showPrint=0&amp;showTz=0&amp;showTitle=0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
     <script type="text/javascript">
       // Client ID and API key from the Developer Console

@@ -1,0 +1,27 @@
+iframe{
+    border: none;
+    width: 100%;
+    height: 700px;
+}
+
+.view-cap, .view-container-border,
+.mv-daynames-table,
+.ui-rtsr-selected,
+.wk-weektop,
+.wk-dummyth,
+.date-picker-arrow-on,
+.dp-weekend-selected
+{ background-color:#dfdfdf; }
+
+iframe #td-print-text-id{
+    display: none;
+}
+
+iframe #calendarTabs1{
+    display: none;
+}
+
+iframe #calendar-nav{
+    display: none;
+}
+
