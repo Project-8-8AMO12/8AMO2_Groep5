@@ -47,6 +47,10 @@ class PagesController extends Controller
         return view('frontend.winkel');
     }
 
+    public function getAgenda() {
+        return view('frontend.agenda');
+    }
+
     public function getContact() {
         $users = new ContactController();
         return view("frontend/contact", [

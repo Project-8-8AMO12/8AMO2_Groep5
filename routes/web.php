@@ -24,6 +24,7 @@ Route::get('/lid-worden', 'PagesController@getLidWorden');
 Route::get('/bijenstal', "PagesController@getBijenstal");
 Route::get('/contact', "PagesController@getContact");
 Route::get('/winkel', "PagesController@getWinkel");
+Route::get('/agenda', "PagesController@getAgenda");
 
 
 # Backend Pages
