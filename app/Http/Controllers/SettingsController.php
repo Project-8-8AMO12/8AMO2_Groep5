@@ -6,7 +6,7 @@ use App\User;
 use Illuminate\Support\Facades\DB;
 
 
-class UsersController {
+class SettingsController {
 
     public function makeUser() {
         $data = request()->validate([
@@ -30,14 +30,9 @@ class UsersController {
     }
 
     public function deleteUser() {
-//        if(!empty(request("deleteUser"))) {
-//            DB::table('users')->where('id', '=', $_POST['user_id'])->delete();
-//        }
-
-        $str = "<form method='post'><input type ='text' name='name'></form>";
-        return view('backend/users/users', [ "oef" =>$str]);
-        if(!empty(request("editUser"))) {
-            DB::table('users')->where('id', '=', $_POST['user_id'])->delete();
+        if(!empty(request("deleteUser"))) {
+            DB::table('users')->where('id', '=', request('user_id'))->delete();
         }
+        return back();
     }
 }

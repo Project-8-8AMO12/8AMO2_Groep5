@@ -39,7 +39,7 @@ Route::prefix('backend')->group(function () {
 
     Route::get('/settings', 'BackendController@getSettings');
 
-    Route::post('users', 'UsersController@makeUser');
-    Route::post('users', 'UsersController@deleteUser');
+    Route::post('makeUser', 'SettingsController@makeUser');
+    Route::post('settings', 'SettingsController@deleteUser');
 });
 

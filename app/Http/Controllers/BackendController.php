@@ -46,15 +46,10 @@ class BackendController extends Controller
         return view('backend/CMS/assets');
     }
 
-    public function getUsers() {
-        $users = new UsersController();
-
-        return view('backend/users/users', [
+    public function getSettings() {
+        $users = new SettingsController();
+        return view('backend/settings/settings', [
             "users" => $users->getUsers()
         ]);
-    }
-
-    public function getSettings() {
-        return view('backend/settings/settings');
     }
 }
