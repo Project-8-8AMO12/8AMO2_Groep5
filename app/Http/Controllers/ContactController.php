@@ -20,20 +20,12 @@ class ContactController extends Controller {
         $contact->message = $this->filterData(request("message"));
         $contact->save();
 
-        return view('home');
+        return view('frontend.home');
     }
 
     public function getUserAdmin() {
-        $users = DB::table('users')->select('id', 'name', 'admin_lvl')->get();
-
-        foreach ($users as $user) {
-            if($user->admin_lvl >= 3) {
-                return view("frontend/contact", [
-                    "admins" => $users
-                ]);
-            }
-        }
-        return view("frontend/contact");
+        $users = DB::table('users')->select('id', 'name', 'admin_lvl')->where("admin_lvl", 3)->get();
+        return $users;
     }
 
     private function filterData($string) {

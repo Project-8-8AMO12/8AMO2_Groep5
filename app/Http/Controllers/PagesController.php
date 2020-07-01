@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
@@ -26,6 +27,10 @@ class PagesController extends Controller
         return view('frontend.zwermGezien');
     }
 
+    public function getHetBlad() {
+        return view('frontend.hetblad');
+    }
+
     public function getLidWorden() {
         return view('frontend.lidWorden');
     }
@@ -38,7 +43,19 @@ class PagesController extends Controller
         return view('backend.dashboard');
     }
 
+    public function getWinkel() {
+        return view('frontend.winkel');
+    }
+
+    public function getAgenda() {
+        return view('frontend.agenda');
+    }
+
     public function getContact() {
-        return view('frontend.contact');
+        $users = new ContactController();
+        return view("frontend/contact", [
+            "admins" => $users->getUserAdmin()
+        ]);
+
     }
 }

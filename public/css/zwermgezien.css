@@ -1,0 +1,31 @@
+.zwermgezien .content p{
+    font-size: 17px;
+}
+
+.zwermgezien .mid_info{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 150px 0;
+}
+
+.zwermgezien .mid_info .foto_long{
+    width: 50%;
+    height: 200px;
+    background-color: brown;
+    object-fit: cover;
+}
+
+.zwermgezien .mid_info .foto_short{
+    width: 40%;
+    height: 200px;
+    background-color: darkblue;
+    object-fit: cover;
+}
+
+.zwermgezien .bottom_info .title h1{
+    text-align: right;
+}
+
+.zwermgezien .bottom_info .content p{
+    text-align: right;
+}

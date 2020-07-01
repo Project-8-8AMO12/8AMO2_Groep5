@@ -1,0 +1,27 @@
+.mid_foto_sect .foto_flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 45px 0;
+}
+
+.mid_foto_sect .foto_flex .foto_long{
+    width: 55%;
+    height: 200px;
+    background-color: brown;
+    object-fit: cover;
+}
+
+.mid_foto_sect .foto_flex .foto_short{
+    width: 40%;
+    height: 200px;
+    background-color: darkblue;
+    object-fit: cover;
+}
+
+.mid_foto_sect .big_foto{
+    width: 100%;
+    height: 250px;
+    background-color: darkgreen;
+    object-fit: cover;
+    margin: 0 0 150px 0;
+}

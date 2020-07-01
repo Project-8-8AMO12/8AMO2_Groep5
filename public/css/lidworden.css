@@ -1,0 +1,14 @@
+.lidworden_form input{
+    width: 300px;
+
+}
+
+.lidworden_form button{
+    width: 200px;
+    background-color: #a9ba4f;
+    color: #ffffff;
+    border: none;
+    border-color: none;
+    height: 30px;
+
+}
