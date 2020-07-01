@@ -38,7 +38,6 @@
                 <label>List of users</label>
                 <div class="row">
                 @foreach($users as $user)
-
                         <div class="col-5">
                             <p>Name: {{$user->name}}</p>
                             <p>E-mail: {{$user->email}}</p>

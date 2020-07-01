@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->integer("admin_lvl")->nullable();
             $table->rememberToken();
             $table->timestamps();
+            $table->integer('deleted')->default(0);
         });
     }
 

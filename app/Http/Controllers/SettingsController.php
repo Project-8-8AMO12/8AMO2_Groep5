@@ -25,20 +25,21 @@ class SettingsController {
     }
 
     public function getUsers() {
-        $users = User::all();
+        $users = DB::table('users')->where('deleted', '=', 0)->get();
         return $users;
     }
 
     public function deleteUser() {
         if(!empty(request("deleteUser"))) {
-            DB::table('users')->where('id', '=', request('user_id'))->delete();
+            $userId = filter_var(request("user_id"), FILTER_SANITIZE_SPECIAL_CHARS);
+            DB::table('users')->where('deleted', '=', 0)->where('id', '=', $userId)->update(['deleted' => 1]);
         }
         return back();
     }
 
     public function editUser() {
         if(!empty(request("user_id"))) {
-            $user = DB::table('users')->where('id', '=', request('user_id'))->get();
+            $user = DB::table('users')->where('id', '=', request('user_id'))->where('deleted', '=', 0)->get();
             return view('backend/settings/editUsers', [
                 'user' => $user
             ]);
@@ -49,9 +50,14 @@ class SettingsController {
         $data = request()->validate([
             'name' => 'required|min:3|',
             'email' => 'required|email|',
+            'password' => 'required',
             'admin' => 'required'
         ]);
-        $user = DB::table('users')->where('id', '=', request('user_id'))->update(['name' => request('name'), 'email' => request('email'), 'admin_lvl' => request('admin')]);
+        $name = filter_var(request("name"), FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_var(request("email"), FILTER_SANITIZE_SPECIAL_CHARS);
+        $admin_lvl = filter_var(request("admin"), FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = password_hash(request("password"), PASSWORD_BCRYPT);
+        $user = DB::table('users')->where('deleted', '=', 0)->where('id', '=', request('user_id'))->update(['name' => $name, 'email' => $email, 'password' => $password, 'admin_lvl' => $admin_lvl]);
         return view('backend/dashboard');
     }
 }

@@ -15,6 +15,12 @@
                     </div>
                     <div class="font-weight-bold">{{$errors->first('email')}}</div>
 
+                    <label>New Password:</label>
+                    <div class="input-group mb-2">
+                        <input type="password" name="password"  class="form-control">
+                    </div>
+                    <div class="font-weight-bold">{{$errors->first('password')}}</div>
+
                     <div class="font-weight-bold">{{$errors->first('password')}}</div>
                     <label>Admin level:</label>
                     <div class="input-group mb-2">
