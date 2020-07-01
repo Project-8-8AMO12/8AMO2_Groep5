@@ -23,7 +23,7 @@
 @endif
 
 
-@if (!Request::is('backend/dashboard') && !Request::is('backend/login') && !Request::is('backend/register'))
+@if (!Request::is('backend/dashboard') && !Request::is('backend/login') && !Request::is('backend/register') && Request::is('backend/CMS'))
     @include('partials.backend.sidebar')
 @else
     @yield('content')
