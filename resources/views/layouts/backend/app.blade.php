@@ -22,7 +22,8 @@
     @include('partials.backend.navbar')
 @endif
 
-@if (str_contains(url()->current(), '/CMS'))
+
+@if (!Request::is('backend/dashboard') && !Request::is('backend/login') && !Request::is('backend/register'))
     @include('partials.backend.sidebar')
 @else
     @yield('content')
