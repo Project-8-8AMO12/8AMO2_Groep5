@@ -9,9 +9,15 @@
 <div class="container">
     <div class="download">
         <p>download hier uw magazine</p><br>
-        <form method="get" action="file.doc">
-            <button type="submit">Download Magazine</button>
+        <a href="../backend/CMS/assets.jpg" download><button type="submit">Download de magazine</button></a><br>
         </form>
+
+        @if (session('status'))
+            <form method="get" action="../backend/CMS/assets">
+                <p>U hebt het recht om de magazine aan te passen</p>
+                <button type="submit">Upload Magazine</button>
+            </form>
+        @endif
     </div>
 </div>
 
