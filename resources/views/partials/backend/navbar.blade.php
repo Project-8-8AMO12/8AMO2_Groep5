@@ -39,6 +39,7 @@
             <a class='text-white p-4 {{ str_contains(url()->current(), '/dashboard') ? '_active' : '' }}' href="/backend/dashboard">Dashboard</a>
             <a class='text-white p-4 {{ str_contains(url()->current(), '/CMS') ? '_active' : '' }}' href="/backend/CMS">CMS</a>
             <a class='text-white p-4 {{ str_contains(url()->current(), '/settings') ? '_active' : '' }}' href="/backend/settings">Settings</a>
+            <a class='text-white p-4 {{ str_contains(url()->current(), '/contact') ? '_active' : '' }}' href="/backend/contact/">contact</a>
         </div>
     </div>
 </nav>

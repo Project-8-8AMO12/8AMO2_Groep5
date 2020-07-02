@@ -27,7 +27,6 @@ Route::get('/bijenstal', "FrontendPagesController@getBijenstal");
 Route::get('/contact', "FrontendPagesController@getContact");
 Route::get('/winkel', "FrontendPagesController@getWinkel");
 Route::get('/agenda', "FrontendPagesController@getAgenda");
-//Route::get('/contact', "ContactController@getUserAdmin");
 
 
 # Backend Pages
@@ -60,6 +59,9 @@ Route::prefix('backend')->group(function () {
 
     Route::post('/CMS/assets', 'AssetsController@getUpload');
     Route::get('/CMS/assets/download', 'AssetsController@getDownload');
+
+    Route::get('/contact', 'ContactController@getContact');
+    Route::post('contact/delContact', 'ContactController@delContact');
 
 
 });
