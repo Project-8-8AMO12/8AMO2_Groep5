@@ -1,6 +1,7 @@
 @extends('layouts.standard.app')
 
 @section('content')
+
     <div class="container">
         <h1 class="display-1">Contact</h1>
         <form action="contact" method="post">

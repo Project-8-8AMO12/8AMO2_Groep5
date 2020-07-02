@@ -6,6 +6,10 @@
 
 @section('content')
 
+    @foreach($sections as $section)
+        {!! $section !!}
+    @endforeach
+
     <section class="container">
         <div class="my-5">
             <h1 class="my-3 imkersGreen rounded text-white p-3">

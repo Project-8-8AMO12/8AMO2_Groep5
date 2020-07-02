@@ -1,6 +1,11 @@
 @extends('layouts.standard.app')
 
 @section('content')
+
+    @foreach($sections as $section)
+        {!! $section !!}
+    @endforeach
+
     <div class=" bg-white">
         <div class="container">
             <h1 class="mb-4">De Bijenstal</h1>

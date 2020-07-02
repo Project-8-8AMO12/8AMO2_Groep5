@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ContactController extends Controller {
@@ -20,10 +21,10 @@ class ContactController extends Controller {
         $contact->message = $this->filterData(request("message"));
         $contact->save();
 
-        return view('frontend.home');
+        return back();
     }
 
-    public function getUserAdmin() {
+    public static function getUserAdmin() {
         $users = DB::table('users')->select('id', 'name', 'admin_lvl')->where("admin_lvl", 3)->get();
         return $users;
     }
@@ -31,5 +32,21 @@ class ContactController extends Controller {
     private function filterData($string) {
         $string = filter_var($string, FILTER_SANITIZE_SPECIAL_CHARS);
         return $string;
+    }
+
+    public function getContact() {
+        $contact = DB::table('contacts')->select('id', 'name', 'email', 'message')->where('user_id', '=', Auth::id())->get();
+        if(!empty($contact)) {
+            return view('backend/contact/contact', [
+                'contact' => $contact
+            ]);
+        } else {
+            return view('backend/contact/contact');
+        }
+    }
+
+    public function delContact() {
+        $contact = DB::table('contacts')->where('id', '=', request('conId'))->delete();
+        return back();
     }
 }

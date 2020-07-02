@@ -6,11 +6,13 @@
 
 @section('content')
 
-<?php
+    @foreach($sections as $section)
+        {!! $section !!}
+    @endforeach
 
-$filename= 'iiasuni.jpg';
-
-?>
+    <?php
+        $filename= 'iiasuni.jpg';
+    ?>
 
 <div class="container">
     <div class="download">

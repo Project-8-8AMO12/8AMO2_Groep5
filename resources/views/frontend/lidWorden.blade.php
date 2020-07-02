@@ -6,11 +6,15 @@
 
 @section('content')
 
+    @foreach($sections as $section)
+        {!! $section !!}
+    @endforeach
+
 <div class="container">
     <div class="lidworden_form">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
             <h3></h3>
-                    
+
             <p><?php // echo $error; ?></p>
 
             <label for="voornaam">Voornaam</label><br>
@@ -28,7 +32,7 @@
             <label for="nummer">telefoonnummer</label><br>
             <input type="text" name="nummer" /><br><br>
 
-            <button type="submit" name="submit_aanmelden">Aanmelden</button><br><br>    
+            <button type="submit" name="submit_aanmelden">Aanmelden</button><br><br>
         </form>
     </div>
 </div>
