@@ -21,7 +21,6 @@
                     </div>
                     <div class="font-weight-bold">{{$errors->first('password')}}</div>
 
-                    <div class="font-weight-bold">{{$errors->first('password')}}</div>
                     <label>Admin level:</label>
                     <div class="input-group mb-2">
                         <select name="admin" class="form-control">
