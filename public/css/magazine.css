@@ -1,0 +1,12 @@
+.magazine h1{
+    margin: 30px auto 30px auto;
+}
+
+.magazine button{
+    height: 37px;
+    background-color: #a9ba4f;
+    color: #fff;
+    width: 100px;
+}
+
+

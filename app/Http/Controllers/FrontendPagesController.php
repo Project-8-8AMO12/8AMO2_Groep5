@@ -63,13 +63,10 @@ class FrontendPagesController extends Controller
     public function getContact() {
         $users = DB::table('users')->select('id', 'name', 'admin_lvl')->get();
 
-        foreach ($users as $user) {
-            if($user->admin_lvl >= 3) {
-                return view("frontend/contact", [
-                    "admins" => $users
-                ]);
-            }
-        }
+        $users = new ContactController();
+        return view("frontend/contact", [
+            "admins" => $users->getUserAdmin()
+        ]);
 
         $sections = $this->cms->getSections('contact');
 

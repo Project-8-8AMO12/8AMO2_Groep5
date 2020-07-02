@@ -2,6 +2,7 @@
 {{--    <div class="px-5 d-flex">--}}
 {{--        <a class='ml-5 text-white p-3 {{ Request::is('backend/dashboard') ? '_active' : '' }}' href="/backend/dashboard">Dashboard</a>--}}
 {{--        <a class='text-white p-3 {{ Request::is('backend/CMS') ? '_active' : '' }}' href="/backend/CMS">CMS</a>--}}
+{{--        <a class='text-white p-3 {{ Request::is('backend/magazine') ? '_active' : '' }}' href="/backend/magazine">Magazine</a>--}}
 {{--        <a class='text-white p-3 {{ Request::is('backend/settings') ? '_active' : '' }}' href="/backend/settings">Settings</a>--}}
 {{--        <!-- Authentication Links -->--}}
 {{--        @guest--}}

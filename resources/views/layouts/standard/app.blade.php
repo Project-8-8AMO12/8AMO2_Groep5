@@ -22,6 +22,7 @@
     <link href="{{ asset('/css/vereniging.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/lidworden.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/hetblad.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/agenda.css') }}" rel="stylesheet">
 
 </head>
 <body>

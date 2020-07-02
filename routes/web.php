@@ -15,16 +15,7 @@ Route::post("contact", "ContactController@saveData");
 
 # GET
 
-Route::get('/', 'PagesController@getHome');
-Route::get('/activiteiten', 'PagesController@getActiviteiten');
-Route::get('/cursussen', 'PagesController@getCursussen');
-Route::get('/vereniging', 'PagesController@getVereniging');
-Route::get('/zwermGezien', 'PagesController@getZwermGezien');
-Route::get('/hetblad', 'PagesController@getHetBlad');
-Route::get('/lid-worden', 'PagesController@getLidWorden');
-Route::get('/bijenstal', "PagesController@getBijenstal");
-Route::get('/contact', "PagesController@getContact");
-Route::get('/contact', "ContactController@getUserAdmin");
+
 
 Route::get('/', 'FrontendPagesController@getHome');
 Route::get('/activiteiten', 'FrontendPagesController@getActiviteiten');
@@ -34,6 +25,8 @@ Route::get('/zwermGezien', 'FrontendPagesController@getZwermGezien');
 Route::get('/lid-worden', 'FrontendPagesController@getLidWorden');
 Route::get('/bijenstal', "FrontendPagesController@getBijenstal");
 Route::get('/contact', "FrontendPagesController@getContact");
+Route::get('/winkel', "FrontendPagesController@getWinkel");
+Route::get('/agenda', "FrontendPagesController@getAgenda");
 //Route::get('/contact', "ContactController@getUserAdmin");
 
 
@@ -60,6 +53,14 @@ Route::prefix('backend')->group(function () {
     Route::get('/CMS/content', 'BackendPagesController@getCMSContent');
     Route::get('/CMS/assets', 'BackendPagesController@getCMSAssets');
 
+
     Route::get('/settings', 'BackendPagesController@getSettings');
+
+    Route::get('/settings', 'BackendController@getSettings');
+
+    Route::post('/CMS/assets', 'AssetsController@getUpload');
+    Route::get('/CMS/assets/download', 'AssetsController@getDownload');
+
+
 });
 
