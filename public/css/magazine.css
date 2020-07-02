@@ -9,4 +9,19 @@
     width: 100px;
 }
 
+.magazine_container{
+    padding-bottom: 40px;
+    border-bottom: solid 1px #333;
+}
+
+.fotoupload h1{
+    margin: 80px auto 30px auto;
+}
+
+.fotoupload button{
+    height: 37px;
+    background-color: #a9ba4f;
+    color: #fff;
+    width: 100px;
+}
 

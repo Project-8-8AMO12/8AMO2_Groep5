@@ -47,6 +47,10 @@ class PagesController extends Controller
         return view('frontend.winkel');
     }
 
+    public function getFotos() {
+        return view('frontend.fotos');
+    }
+
     public function getAgenda() {
         return view('frontend.agenda');
     }

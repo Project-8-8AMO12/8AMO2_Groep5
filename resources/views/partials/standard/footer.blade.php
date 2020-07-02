@@ -13,7 +13,7 @@
             <div class="col"><a class='text-white' href="/cursussen">Cursussen</a></div>
             <div class="col"><a class='text-white' href="/hetblad">Het Blad</a></div>
             <div class="col"><a class='text-white' href="/bijenstal">De Bijenstal</a></div>
-            <div class="col"><a class='text-white' href="/aanmelden">Doe Nu Mee!</a></div>
+            <div class="col"><a class='text-white' href="/fotos">Foto's</a></div>
         </div>
     </div>
 </footer>
