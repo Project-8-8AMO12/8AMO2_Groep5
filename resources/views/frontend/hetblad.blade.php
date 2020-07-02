@@ -6,10 +6,18 @@
 
 @section('content')
 
+<?php
+
+$filename= 'iiasuni.jpg';
+
+?>
+
 <div class="container">
     <div class="download">
         <p>download hier uw magazine</p><br>
-        <a href="../backend/CMS/assets.jpg" download><button type="submit">Download de magazine</button></a><br>
+
+        <form method="get" action="../backend/CMS/assets/download">
+            <button type="submit">Download de magazine</button>
         </form>
 
         @if (session('status'))

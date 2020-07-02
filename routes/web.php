@@ -40,5 +40,9 @@ Route::prefix('backend')->group(function () {
     Route::get('/CMS/assets', 'BackendController@getCMSAssets');
 
     Route::get('/settings', 'BackendController@getSettings');
+
+    Route::post('/CMS/assets', 'AssetsController@getUpload');
+    Route::get('/CMS/assets/download', 'AssetsController@getDownload');
+
 });
 
