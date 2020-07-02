@@ -27,8 +27,7 @@ Route::get('/bijenstal', "FrontendPagesController@getBijenstal");
 Route::get('/contact', "FrontendPagesController@getContact");
 Route::get('/winkel', "FrontendPagesController@getWinkel");
 Route::get('/agenda', "FrontendPagesController@getAgenda");
-//Route::get('/contact', "ContactController@getUserAdmin");
-
+Route::get('/fotos', "PagesController@getFotos");
 
 # Backend Pages
 Route::prefix('backend')->group(function () {
@@ -61,6 +60,7 @@ Route::prefix('backend')->group(function () {
 
     Route::get('/settings', 'BackendPagesController@getSettings');
 
+
     Route::get('/settings', 'BackendPagesController@getSettings');
     Route::get('/settings/edit', 'SettingsController@editUser');
 
@@ -69,7 +69,12 @@ Route::prefix('backend')->group(function () {
     Route::post('settings/saveEdit', 'SettingsController@saveEdit');
 
     Route::post('/CMS/assets', 'AssetsController@getUpload');
+    Route::post('/CMS/assets/fotoupload', 'AssetsController@fotoUpload');
+    Route::post('/CMS/assets/upload', 'AssetsController@getUpload');
+
     Route::get('/CMS/assets/download', 'AssetsController@getDownload');
 
+    Route::get('/contact', 'ContactController@getContact');
+    Route::post('contact/delContact', 'ContactController@delContact');
 });
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContactTable extends Migration
+class CreateContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -19,6 +19,7 @@ class CreateContactTable extends Migration
             $table->string('name', 128)->nullable(false);
             $table->string('email', 128)->nullable(false);
             $table->text('message')->nullable(false);
+            $table->integer('deleted')->default(0);
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateContactTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact');
+        Schema::dropIfExists('contacts');
     }
 }
