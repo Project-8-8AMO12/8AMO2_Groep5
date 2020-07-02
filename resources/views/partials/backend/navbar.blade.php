@@ -7,7 +7,7 @@
             <a class='text-white p-4 {{ Request::is('backend/dashboard') ? '_active' : '' }}' href="/backend/dashboard">Dashboard</a>
             <a class='text-white p-4 {{ Request::is('backend/CMS') ? '_active' : '' }}' href="/backend/CMS">CMS</a>
             <a class='text-white p-4 {{ Request::is('backend/settings') ? '_active' : '' }}' href="/backend/settings">Settings</a>
-            <a class='text-white p-4 {{ str_contains(url()->current(), '/contact') ? '_active' : '' }}' href="/backend/contact/">
+            <a class='text-white p-4 {{Request::is('backend/contact') ? '_active' : '' }}' href="/backend/contact/">
             <a class="dropdown-item" href="{{ route('logout') }}"
                onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
