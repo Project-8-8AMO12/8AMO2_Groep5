@@ -10,13 +10,11 @@
 
 <p>Google Calendar API Quickstart</p>
 
-    <!--Add buttons to initiate auth sequence and sign out-->
+    <!--Add buttons to initiate auth sequence and sign out
     <button id="authorize_button" style="display: none;">Authorize</button>
-    <button id="signout_button" style="display: none;">Sign Out</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>-->
 
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23a9ba4f&amp;ctz=Europe%2FAmsterdam&amp;src=aWxpYXNib3VqaUBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=bmwuZHV0Y2gjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%237986CB&amp;color=%2333B679&amp;color=%230B8043&amp;title=IMKERSVERENIGING%20LEIDEN&amp;showNav=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;showPrint=0&amp;showTz=0&amp;showTitle=0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
-    <script type="text/javascript">
+    <iframe src="https://feed.mikle.com/widget/v2/132723/?preloader-text=Loading" height="500px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>    <script type="text/javascript">
       // Client ID and API key from the Developer Console
       var CLIENT_ID = '944724698610-m0gj9kluv2l67c2hhk5immaj0d3l70hm.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyBXKmepi7TwbGX28ApiAGiy3GwLWo-ki8Q';

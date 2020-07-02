@@ -15,6 +15,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/magazine.css') }}" rel="stylesheet">
 </head>
 <body>
 
@@ -23,7 +24,7 @@
 @endif
 
 
-@if (!Request::is('backend/dashboard') && !Request::is('backend/login') && !Request::is('backend/register') && Request::is('backend/CMS'))
+@if (!Request::is('backend/dashboard') && !Request::is('backend/login') && !Request::is('backend/register'))
     @include('partials.backend.sidebar')
 @else
     @yield('content')
