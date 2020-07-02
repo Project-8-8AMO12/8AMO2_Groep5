@@ -35,22 +35,27 @@
                 </form>
             </div>
             <div>
-                <label>List of users</label>
-                <div class="row">
-                @foreach($users as $user)
-                        <div class="col-5">
+                <div class="w-100 text-center">
+                    <label class="m-auto">List of users</label>
+                </div>
+                <div class="row justify-content-center">
+                    @foreach($users as $user)
+                        <div class="col-5 border-dark border">
                             <p>Name: {{$user->name}}</p>
                             <p>E-mail: {{$user->email}}</p>
                             <p>Admin Level: {{$user->admin_lvl}}</p>
-
-                            <a href="{{url("backend/settings/edit?user_id=". $user->id)}}" class="btn-primary btn" value="Edit">Edit</a>
-                            <form class="mb-3" method="post" action="settings">
-                                <input type="hidden" name="user_id" value="{{$user->id}}">
-                                <input type="submit" class="btn-danger btn" value="Delete" name="deleteUser">
-                                @csrf
-                            </form>
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="{{url("backend/settings/edit?user_id=". $user->id)}}" class="btn-primary btn" value="Edit">Edit</a>
+                                </div>
+                                <form class="mb-3" method="post" action="settings">
+                                    <input type="hidden" name="user_id" value="{{$user->id}}">
+                                    <input type="submit" class="btn-danger btn" value="Delete" name="deleteUser">
+                                    @csrf
+                                </form>
+                            </div>
                         </div>
-                @endforeach
+                    @endforeach
                 </div>
             </div>
         </div>
