@@ -31,7 +31,7 @@ class AssetsController extends Controller
     }
 
     public function getDownload(){
-        $f="magazine.jpg";   
+        $f="bijenhoudenknipsel.jpg";   
 
         $target_dir =  str_replace('\\', '/', base_path('resources/views/backend/magazine/'));
         $path = pathinfo($f);
