@@ -14,6 +14,7 @@
 Route::post("contact", "ContactController@saveData");
 
 # GET
+
 Route::get('/', 'PagesController@getHome');
 Route::get('/activiteiten', 'PagesController@getActiviteiten');
 Route::get('/cursussen', 'PagesController@getCursussen');
@@ -25,18 +26,40 @@ Route::get('/bijenstal', "PagesController@getBijenstal");
 Route::get('/contact', "PagesController@getContact");
 Route::get('/contact', "ContactController@getUserAdmin");
 
+Route::get('/', 'FrontendPagesController@getHome');
+Route::get('/activiteiten', 'FrontendPagesController@getActiviteiten');
+Route::get('/cursussen', 'FrontendPagesController@getCursussen');
+Route::get('/vereniging', 'FrontendPagesController@getVereniging');
+Route::get('/zwermGezien', 'FrontendPagesController@getZwermGezien');
+Route::get('/lid-worden', 'FrontendPagesController@getLidWorden');
+Route::get('/bijenstal', "FrontendPagesController@getBijenstal");
+Route::get('/contact', "FrontendPagesController@getContact");
+//Route::get('/contact', "ContactController@getUserAdmin");
+
+
 # Backend Pages
 Route::prefix('backend')->group(function () {
     Auth::routes();
-    Route::get('/', 'BackendController@index');
-    Route::get('/dashboard', 'BackendController@index');
+    Route::get('/', 'BackendPagesController@getDashboard');
+    Route::get('/dashboard', 'BackendPagesController@getDashboard');
 
-    Route::get('/CMS', 'BackendController@getCMS');
-    Route::get('/CMS/pages', 'BackendController@getCMSPages');
-    Route::get('/CMS/partials', 'BackendController@getCMSPartials');
-    Route::get('/CMS/content', 'BackendController@getCMSContent');
-    Route::get('/CMS/assets', 'BackendController@getCMSAssets');
+    Route::get('/CMS', 'BackendPagesController@getCMS');
 
-    Route::get('/settings', 'BackendController@getSettings');
+    Route::get('/CMS/pages', 'BackendPagesController@getCMSPages');
+    Route::get('/CMS/pages/editPage', 'BackendPagesController@getCMSEditPage');
+    Route::get('/CMS/pages/editPage{pageName}', 'BackendPagesController@getCMSEditPage');
+    Route::get('/CMS/pages/editPage/addSection', 'BackendPagesController@getCMSAddSection');
+    Route::get('/CMS/pages/editPage/addSection{section}', 'BackendPagesController@getCMSAddSection');
+    Route::get('/CMS/pages/editPage/addSection/form', 'BackendPagesController@getCMSform');
+    Route::post('/CMS/pages/editPage/addSection/form/saveNewSection', 'CMSController@saveSection');
+
+
+
+
+    Route::get('/CMS/partials', 'BackendPagesController@getCMSPartials');
+    Route::get('/CMS/content', 'BackendPagesController@getCMSContent');
+    Route::get('/CMS/assets', 'BackendPagesController@getCMSAssets');
+
+    Route::get('/settings', 'BackendPagesController@getSettings');
 });
 

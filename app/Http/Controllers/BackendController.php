@@ -21,7 +21,7 @@ class BackendController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function getDashboard()
     {
         return view('backend/dashboard');
     }

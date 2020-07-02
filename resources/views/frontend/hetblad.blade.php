@@ -6,6 +6,10 @@
 
 @section('content')
 
+    @foreach($sections as $section)
+        {!! $section !!}
+    @endforeach
+
 <div class="container">
     <div class="download">
         <p>download hier uw magazine</p><br>

@@ -1,6 +1,11 @@
 @extends('layouts.standard.app')
 
 @section('content')
+
+    @foreach($sections as $section)
+        {!! $section !!}
+    @endforeach
+
     <div class="container">
         <h1 class="display-1">Contact</h1>
         <form action="contact" method="post">
@@ -8,9 +13,12 @@
             <label> Stuur een bericht naar iemand van ons team:</label>
             <div class="dropdown w-25">
                 <select name="user_id" class="form-control">
-                    @foreach($admins as $admin)
-                        <option value={{$admin->id}}>{{$admin->name}}</option>
-                    @endforeach
+{{--                    @foreach($admins as $admin)--}}
+{{--                        <option value={{$admin->id}}>{{$admin->name}}</option>--}}
+{{--                    @endforeach--}}
+                    <option>Piet</option>
+                    <option>Jan</option>
+                    <option>Achmad</option>
                 </select>
             </div>
 
