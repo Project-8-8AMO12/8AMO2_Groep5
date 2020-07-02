@@ -8,7 +8,10 @@ use Illuminate\Support\Facades\Storage;
 
 class BackendPagesController extends Controller
 {
-    # backend
+    public function __construct()
+    {
+        $this->cms = new CMSController();
+    }
 
     public function getDashboard()
     {
@@ -61,7 +64,9 @@ class BackendPagesController extends Controller
 
     public function getCMSPartials()
     {
-        return view('backend/CMS/partials');
+        $partials = $this->cms->getPartials();
+
+        return view('backend/CMS/partials', compact('partials'));
     }
 
     public function getCMSContent()

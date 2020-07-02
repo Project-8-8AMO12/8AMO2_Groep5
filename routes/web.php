@@ -40,29 +40,30 @@ Route::prefix('backend')->group(function () {
     Route::get('/CMS/pages', 'BackendPagesController@getCMSPages');
     Route::get('/CMS/pages/editPage', 'BackendPagesController@getCMSEditPage');
     Route::get('/CMS/pages/editPage{pageName}', 'BackendPagesController@getCMSEditPage');
+
     Route::get('/CMS/pages/editPage/addSection', 'BackendPagesController@getCMSAddSection');
     Route::get('/CMS/pages/editPage/addSection{section}', 'BackendPagesController@getCMSAddSection');
     Route::get('/CMS/pages/editPage/addSection/form', 'BackendPagesController@getCMSform');
     Route::post('/CMS/pages/editPage/addSection/form/saveNewSection', 'CMSController@saveSection');
 
+    Route::get('/CMS/pages/editPage/deleteSection', 'CMSController@deleteSection');
+    Route::get('/CMS/pages/editPage/deleteSection{delete}', 'CMSController@deleteSection');
 
+    Route::get('/CMS/pages/editPage/editSection', 'CMSController@editSection');
+    Route::get('/CMS/pages/editPage/editSection{edit}', 'CMSController@editSection');
 
+    Route::post('/CMS/pages/editPage/editSection/updateSection', 'CMSController@updateSection');
 
     Route::get('/CMS/partials', 'BackendPagesController@getCMSPartials');
     Route::get('/CMS/content', 'BackendPagesController@getCMSContent');
     Route::get('/CMS/assets', 'BackendPagesController@getCMSAssets');
 
-
     Route::get('/settings', 'BackendPagesController@getSettings');
-
-    Route::get('/settings', 'BackendController@getSettings');
 
     Route::post('/CMS/assets', 'AssetsController@getUpload');
     Route::get('/CMS/assets/download', 'AssetsController@getDownload');
 
     Route::get('/contact', 'ContactController@getContact');
     Route::post('contact/delContact', 'ContactController@delContact');
-
-
 });
 

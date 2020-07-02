@@ -15,8 +15,8 @@
             @foreach($sections as $section)
                 <li class="list-group-item">
                     {{ $section->pageName . ' - ' . $section->sectionId }}
-                    <button type="submit" name='delete' class="float-right btn btn-danger mx-1">Delete this section</button>
-                    <button type="submit" name='edit' class="float-right btn btn-success">Edit this section</button>
+                    <a href="{{url()->current()}}/deleteSection?id={{ $section->id }}" name='delete' class="btn btn-danger mx-1 float-right">Delete this section</a>
+                    <a href='{{url()->current()}}/editSection?id={{ $section->id }}' type="submit" name='edit' class="btn btn-success float-right">Edit this section</a>
                 </li>
             @endforeach
         </ul>
